@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hacker's Text Copier</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Hacker's Text Copier</h1>
+            <button id="configBtn" class="config-btn">O</button>
+        </div>
+
+        <button id="textifyBtn">Textify Selected Tabs</button>
+        <button id="copyTextBtn">Copy Selected Tabs</button>
+
+        <div class="link-opener">
+            <button id="openLinksBtn">Open</button>
+            <input type="number" id="numLinksToOpen" min="1" value="10">
+            <span>first links, excluding</span>
+            <input type="number" id="numLinksToExclude" min="0" value="0">
+        </div>
+
+        <button id="copyTabsLinksBtn">Copy Selected Tabs Links</button>
+        <button id="copyPageLinksBtn">Copy All Links in Page</button>
+        <button id="sendToChatbotBtn">Send to Chatbot</button>
+        <button id="openNotepadLinksBtn">Open All Copied Links</button>
+
+        <textarea id="notepad" rows="10" placeholder="Notepad"></textarea>
+
+        <div class="author">by Yuichi Inumaru</div>
+    </div>
+
+    <div id="configOverlay" class="config-overlay">
+        <div class="config-window">
+            <h2>Configuration</h2>
+            <label for="chatbotLink">Chatbot Link:</label>
+            <input type="text" id="chatbotLink">
+            <label for="chatbotPrompt">Chatbot Prompt:</label>
+            <input type="text" id="chatbotPrompt">
+
+            <div class="slider-container">
+                <label for="opacity">Opacity:</label>
+                <input type="range" id="opacity" min="10" max="100" value="100">
+            </div>
+
+            <div>
+                <label for="alwaysOnTop">Always on Top:</label>
+                <input type="checkbox" id="alwaysOnTop">
+            </div>
+
+            <button id="saveConfigBtn">Save</button>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
